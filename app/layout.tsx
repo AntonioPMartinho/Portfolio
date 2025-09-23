@@ -10,7 +10,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "António Martinho - Backend Developer",
   description: "Backend Developer with 1+ years of experience in Java Spring, Node.js, Docker, and CI/CD automation",
-  generator: "v0.app",
+  generator: "portfolio.app",
 }
 
 export default function RootLayout({
