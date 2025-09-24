@@ -121,23 +121,25 @@ export default function Portfolio() {
               >
                 António Martinho
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">Backend Developer • 1+ years experience</p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Backend Developer • Strong experience in Java, Spring Boot, REST APIs, microservices, CI/CD, and Docker
+              </p>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="px-3 py-1">
                   <Server className="w-3 h-3 mr-1" />
-                  Java Spring
+                  Java Spring Boot
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Code className="w-3 h-3 mr-1" />
-                  Node.js
+                  REST APIs
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Database className="w-3 h-3 mr-1" />
-                  Docker
+                  PostgreSQL
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Cloud className="w-3 h-3 mr-1" />
-                  Terraform
+                  Docker
                 </Badge>
               </div>
             </div>
@@ -146,13 +148,17 @@ export default function Portfolio() {
                 <Mail className="w-4 h-4 mr-2" />
                 Email
               </Button>
-              <Button variant="outline" size="sm">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://github.com/AntonioPMartinho" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </a>
               </Button>
-              <Button variant="outline" size="sm">
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://linkedin.com/in/antonio-martinho" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </div>
@@ -166,53 +172,23 @@ export default function Portfolio() {
             Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Todo List App */}
+            {/* URL Shortener Platform */}
             <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
               <CardHeader className="pb-3">
                 <CardTitle className="text-lg flex items-center justify-between">
-                  Todo List App
+                  URL Shortener Platform
                   <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </CardTitle>
-                <CardDescription className="text-sm">Full-stack task management</CardDescription>
+                <CardDescription className="text-sm">Full-featured microservices platform</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Node.js & Express API</li>
-                  <li>• MongoDB integration</li>
-                  <li>• JWT authentication</li>
-                  <li>• React frontend</li>
-                  <li>• Docker containerization</li>
-                </ul>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                  asChild
-                >
-                  <a href="https://github.com/AntonioPMartinho/todo-list" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    View Code
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* URL Shortener */}
-            <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center justify-between">
-                  URL Shortener
-                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </CardTitle>
-                <CardDescription className="text-sm">Link shortening service</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Java Spring Boot</li>
-                  <li>• Redis caching</li>
-                  <li>• PostgreSQL database</li>
-                  <li>• Analytics tracking</li>
-                  <li>• GitHub Actions CI/CD</li>
+                  <li>• Spring Boot microservices</li>
+                  <li>• Angular frontend</li>
+                  <li>• Keycloak authentication</li>
+                  <li>• PostgreSQL & Docker</li>
+                  <li>• Jenkins CI/CD pipeline</li>
+                  <li>• Traffic analytics dashboard</li>
                 </ul>
                 <Button
                   variant="outline"
@@ -228,6 +204,120 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
+            {/* To-Do List Application */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg flex items-center justify-between">
+                  To-Do List Application
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </CardTitle>
+                <CardDescription className="text-sm">REST API with JWT authentication</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-1 text-sm text-muted-foreground mb-4">
+                  <li>• Java Spring Boot API</li>
+                  <li>• JWT authentication</li>
+                  <li>• Role-based access control</li>
+                  <li>• PostgreSQL database</li>
+                  <li>• JUnit/Mockito testing</li>
+                  <li>• Docker Compose deployment</li>
+                </ul>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                  asChild
+                >
+                  <a href="https://github.com/AntonioPMartinho/todo-list" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    View Code
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* E-commerce Backend */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg flex items-center justify-between">
+                  E-commerce Backend
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </CardTitle>
+                <CardDescription className="text-sm">Microservices architecture study</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-1 text-sm text-muted-foreground mb-4">
+                  <li>• Java Spring Boot</li>
+                  <li>• Microservices architecture</li>
+                  <li>• User, Product, Order services</li>
+                  <li>• MySQL database</li>
+                  <li>• REST API communication</li>
+                  <li>• Integration testing</li>
+                </ul>
+                <Button variant="ghost" size="sm" className="w-full" disabled>
+                  <Code className="w-4 h-4 mr-2" />
+                  Study Project
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* BrianAI Assistant */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg flex items-center justify-between">
+                  BrianAI Assistant
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </CardTitle>
+                <CardDescription className="text-sm">Personal AI assistant (Final Project)</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-1 text-sm text-muted-foreground mb-4">
+                  <li>• Python & PyTorch</li>
+                  <li>• Weather forecast API</li>
+                  <li>• Calendar integration</li>
+                  <li>• Event creation via APIs</li>
+                  <li>• Machine learning backend</li>
+                  <li>• Natural language processing</li>
+                </ul>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                  asChild
+                >
+                  <a href="https://github.com/AntonioPMartinho/brianai" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    View Code
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Portfolio Website */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg flex items-center justify-between">
+                  Portfolio Website
+                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </CardTitle>
+                <CardDescription className="text-sm">Personal portfolio with contact form</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-1 text-sm text-muted-foreground mb-4">
+                  <li>• Next.js & TypeScript</li>
+                  <li>• Fully responsive design</li>
+                  <li>• Optimized performance</li>
+                  <li>• Integrated backend</li>
+                  <li>• Contact form handling</li>
+                  <li>• Modern CSS styling</li>
+                </ul>
+                <Button variant="ghost" size="sm" className="w-full" disabled>
+                  <Code className="w-4 h-4 mr-2" />
+                  This Site!
+                </Button>
+              </CardContent>
+            </Card>
+
             {/* More to Come */}
             <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50 border-dashed">
               <CardHeader className="pb-3">
@@ -239,11 +329,11 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Microservices project</li>
-                  <li>• Real-time chat app</li>
-                  <li>• API gateway</li>
+                  <li>• Advanced microservices</li>
+                  <li>• Real-time applications</li>
+                  <li>• Cloud-native solutions</li>
                   <li>• Kubernetes automation</li>
-                  <li>• ML integration</li>
+                  <li>• AI/ML integrations</li>
                 </ul>
                 <Button variant="ghost" size="sm" className="w-full" disabled>
                   <Code className="w-4 h-4 mr-2" />
@@ -260,90 +350,69 @@ export default function Portfolio() {
             Experience
           </h2>
           <div className="space-y-6">
+            {/* Software Developer (International Internship) */}
             <Card className="border-l-4 border-l-primary">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl">Senior Backend Developer</CardTitle>
-                    <CardDescription className="text-base">CloudTech Solutions</CardDescription>
+                    <CardTitle className="text-xl">Software Developer (International Internship)</CardTitle>
+                    <CardDescription className="text-base">Education and Mobility • Bilbao, Spain</CardDescription>
                   </div>
                   <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    July 2023 - Present
+                    May 2022 - Aug 2023
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Leading backend development for cloud-native applications using Java Spring Boot and Node.js.
-                  Architected and deployed microservices on AWS using Docker and Kubernetes. Implemented infrastructure
-                  as code with Terraform, reducing deployment time by 60%. Mentored junior developers and established
-                  best practices for API design and database optimization.
+                  Sole developer managing the end-to-end software lifecycle. Developed with Java (Spring Boot), MERN
+                  stack, and WordPress. Built REST APIs and services applying microservices principles. Configured and
+                  maintained self-hosted servers and production environments. Implemented CI/CD practices and database
+                  management. Delivered scalable solutions in direct collaboration with business stakeholders.
                 </p>
               </CardContent>
             </Card>
 
+            {/* Freelance Software Developer */}
             <Card className="border-l-4 border-l-accent">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl">Backend Developer</CardTitle>
-                    <CardDescription className="text-base">Tech Solutions Inc.</CardDescription>
+                    <CardTitle className="text-xl">Freelance Software Developer</CardTitle>
+                    <CardDescription className="text-base">GoReady Data • Remote</CardDescription>
                   </div>
                   <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    May 2022 - June 2023
+                    May 2023 - Dec 2023
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Developed and maintained scalable backend services using Java Spring Boot and Node.js. Implemented
-                  microservices architecture, optimized database queries, and established CI/CD pipelines using Jenkins
-                  and GitHub Actions. Collaborated with cross-functional teams to deliver high-quality software
-                  solutions, reducing system response times by 40% and improving overall application performance.
+                  Delivered custom web solutions using PHP, WordPress, and backend technologies. Focused on API
+                  integrations, databases, and deployment workflows. Worked independently in remote collaboration with
+                  clients, managing project requirements and delivering solutions on time.
                 </p>
               </CardContent>
             </Card>
 
+            {/* Software Development Intern */}
             <Card className="border-l-4 border-l-muted">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl">Junior Backend Developer</CardTitle>
-                    <CardDescription className="text-base">StartupHub Technologies</CardDescription>
+                    <CardTitle className="text-xl">Software Development Intern</CardTitle>
+                    <CardDescription className="text-base">CPCECHO • Porto, Portugal</CardDescription>
                   </div>
                   <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    January 2022 - April 2022
+                    Feb 2021 - Jul 2021
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Built RESTful APIs using Node.js and Express.js for e-commerce platform. Integrated third-party
-                  payment systems and implemented user authentication with JWT. Worked with PostgreSQL databases and
-                  Redis for caching. Participated in agile development processes and code reviews, gaining valuable
-                  experience in production-level software development.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-secondary">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                  <div>
-                    <CardTitle className="text-xl">Backend Development Intern</CardTitle>
-                    <CardDescription className="text-base">InnovateLab</CardDescription>
-                  </div>
-                  <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    September 2021 - December 2021
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Contributed to internal tools development using Java Spring Framework. Assisted in database design and
-                  optimization, wrote unit tests, and participated in daily standups. Learned industry best practices
-                  for version control with Git, automated testing, and deployment strategies. Successfully delivered 3
-                  feature implementations that improved team productivity by 25%.
+                  Contributed to the development and maintenance of internal systems. Supported backend tasks including
+                  new features, code optimization, and integrations. Worked with relational databases and assisted in
+                  testing/debugging. First opportunity to apply academic knowledge in a professional environment.
                 </p>
               </CardContent>
             </Card>
@@ -356,86 +425,95 @@ export default function Portfolio() {
             Education
           </h2>
           <div className="space-y-6">
+            {/* 42 Porto – Software Engineering Program */}
             <Card className="border-l-4 border-l-primary">
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                   <div>
-                    <CardTitle className="text-xl">Bachelor's in Computer Science</CardTitle>
-                    <CardDescription className="text-base">University of Porto</CardDescription>
+                    <CardTitle className="text-xl">42 Porto – Software Engineering Program</CardTitle>
+                    <CardDescription className="text-base">42 School</CardDescription>
                   </div>
                   <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    2018 - 2022
+                    Oct 2024 - Jul 2025
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Graduated with honors, focusing on software engineering and distributed systems. Completed capstone
-                  project on microservices architecture using Java Spring Boot and Docker containerization.
+                  Intensive peer-to-peer training in algorithms, C programming, debugging, and clean code practices.
+                  Collaborative programming projects with focus on problem-solving, adaptability, and software
+                  engineering foundations.
                 </p>
                 <div className="space-y-2">
-                  <p className="text-sm font-medium text-foreground">Relevant Coursework:</p>
+                  <p className="text-sm font-medium text-foreground">Focus Areas:</p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary" className="text-xs">
-                      Data Structures & Algorithms
+                      Algorithms
                     </Badge>
                     <Badge variant="secondary" className="text-xs">
-                      Database Systems
+                      C Programming
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Debugging
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Clean Code
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Problem Solving
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Peer Learning
+                    </Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Professional Course in Management and Programming of Information Systems */}
+            <Card className="border-l-4 border-l-accent">
+              <CardHeader>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                  <div>
+                    <CardTitle className="text-xl">
+                      Professional Course in Management and Programming of Information Systems
+                    </CardTitle>
+                    <CardDescription className="text-base">Professional School • GPA: 16/20</CardDescription>
+                  </div>
+                  <Badge variant="outline" className="self-start px-3 py-1 text-sm">
+                    Sep 2019 - Jul 2022
+                  </Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Comprehensive program covering software development, database management, and information systems.
+                  Graduated with excellent academic performance (16/20 GPA), demonstrating strong technical foundation
+                  and practical programming skills.
+                </p>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-foreground">Key Subjects:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary" className="text-xs">
+                      Programming Fundamentals
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Database Design
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      Information Systems
                     </Badge>
                     <Badge variant="secondary" className="text-xs">
                       Software Engineering
                     </Badge>
                     <Badge variant="secondary" className="text-xs">
-                      Distributed Systems
-                    </Badge>
-                    <Badge variant="secondary" className="text-xs">
                       Web Development
                     </Badge>
                     <Badge variant="secondary" className="text-xs">
-                      Computer Networks
+                      Project Management
                     </Badge>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-accent">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                  <div>
-                    <CardTitle className="text-xl">AWS Certified Developer - Associate</CardTitle>
-                    <CardDescription className="text-base">Amazon Web Services</CardDescription>
-                  </div>
-                  <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    2023
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Certified in developing and maintaining applications on AWS platform. Demonstrated expertise in
-                  serverless computing, containerization, and cloud-native application development.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-muted">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                  <div>
-                    <CardTitle className="text-xl">Docker Certified Associate</CardTitle>
-                    <CardDescription className="text-base">Docker Inc.</CardDescription>
-                  </div>
-                  <Badge variant="outline" className="self-start px-3 py-1 text-sm">
-                    2022
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Validated skills in containerization, orchestration, and Docker ecosystem. Expertise in building,
-                  deploying, and managing containerized applications in production environments.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -445,7 +523,7 @@ export default function Portfolio() {
       <footer className="py-6 px-4 border-t border-border/50 mt-12">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 António Martinho • Built with Next.js{" "}
+            © 2025 António Martinho • Built with Next.js{" "}
             {/* 🚀 If you're reading this in dev tools, you're my kind of person! */}
           </p>
         </div>
