@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useToast } from "@/hooks/use-toast"
-import { Github, Linkedin, Mail, ExternalLink, Code, Server, Database, Cloud } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Code, Server, Database, Cloud } from 'lucide-react'
 import { useEffect, useState } from "react"
 
 export default function Portfolio() {
@@ -110,6 +110,60 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "António Martinho",
+            alternateName: "Antonio Martinho",
+            jobTitle: "Backend Developer",
+            description:
+              "Experienced Backend Developer specializing in Java Spring Boot, REST APIs, microservices, Docker, and CI/CD",
+            url: "https://antoniopmartinho.pt",
+            sameAs: ["https://github.com/AntonioPMartinho", "https://linkedin.com/in/antonio-martinho"],
+            email: "contact@antoniopmartinho.pt",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Porto",
+              addressCountry: "Portugal",
+            },
+            knowsAbout: [
+              "Java",
+              "Spring Boot",
+              "REST APIs",
+              "Microservices",
+              "Docker",
+              "PostgreSQL",
+              "CI/CD",
+              "Jenkins",
+              "Node.js",
+              "TypeScript",
+              "Backend Development",
+            ],
+            alumniOf: [
+              {
+                "@type": "EducationalOrganization",
+                name: "42 Porto",
+                description: "Software Engineering Program",
+              },
+            ],
+            worksFor: [
+              {
+                "@type": "Organization",
+                name: "Education and Mobility",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Bilbao",
+                  addressCountry: "Spain",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <header className="py-12 px-4 border-b border-border/50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -169,7 +223,7 @@ export default function Portfolio() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center">
             <Code className="w-6 h-6 mr-2 text-primary" />
-            Projects
+            Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* URL Shortener Platform */}
@@ -179,28 +233,41 @@ export default function Portfolio() {
                   URL Shortener Platform
                   <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </CardTitle>
-                <CardDescription className="text-sm">Full-featured microservices platform</CardDescription>
+                <CardDescription className="text-sm">Production-ready microservices with security & analytics</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Spring Boot microservices</li>
-                  <li>• Angular frontend</li>
-                  <li>• Keycloak authentication</li>
-                  <li>• PostgreSQL & Docker</li>
-                  <li>• Jenkins CI/CD pipeline</li>
-                  <li>• Traffic analytics dashboard</li>
+                  <li>• Spring Boot 3.2 with Spring Security</li>
+                  <li>• Angular 19 frontend with Material Design</li>
+                  <li>• JWT authentication & authorization</li>
+                  <li>• Real-time analytics dashboard</li>
+                  <li>• PostgreSQL with Docker Compose</li>
+                  <li>• Scalable architecture with compression & caching</li>
                 </ul>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                  asChild
-                >
-                  <a href="https://github.com/AntonioPMartinho/url-shortner" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    View Code
-                  </a>
-                </Button>
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    asChild
+                  >
+                    <a href="https://urlshortener.antoniopmartinho.pt" target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Live
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 group-hover:bg-accent group-hover:text-accent-foreground transition-colors bg-transparent"
+                    asChild
+                  >
+                    <a href="https://github.com/AntonioPMartinho/urlShortnerBackend" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -243,16 +310,16 @@ export default function Portfolio() {
                   E-commerce Backend
                   <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </CardTitle>
-                <CardDescription className="text-sm">Microservices architecture study</CardDescription>
+                <CardDescription className="text-sm">Distributed microservices architecture</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Java Spring Boot</li>
-                  <li>• Microservices architecture</li>
-                  <li>• User, Product, Order services</li>
-                  <li>• MySQL database</li>
-                  <li>• REST API communication</li>
-                  <li>• Integration testing</li>
+                  <li>• Java Spring Boot microservices</li>
+                  <li>• Independent User, Product, Order services</li>
+                  <li>• REST API-based inter-service communication</li>
+                  <li>• MySQL with optimized schema design</li>
+                  <li>• Comprehensive integration testing</li>
+                  <li>• Service isolation & scalability</li>
                 </ul>
                 <Button variant="ghost" size="sm" className="w-full" disabled>
                   <Code className="w-4 h-4 mr-2" />
@@ -268,23 +335,18 @@ export default function Portfolio() {
                   BrianAI Assistant
                   <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </CardTitle>
-                <CardDescription className="text-sm">Personal AI assistant (Final Project)</CardDescription>
+                <CardDescription className="text-sm">AI-powered personal assistant with integrations</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-1 text-sm text-muted-foreground mb-4">
-                  <li>• Python & PyTorch</li>
-                  <li>• Weather forecast API</li>
-                  <li>• Calendar integration</li>
-                  <li>• Event creation via APIs</li>
-                  <li>• Machine learning backend</li>
-                  <li>• Natural language processing</li>
+                  <li>• Python backend with PyTorch ML framework</li>
+                  <li>• Weather forecasting API integration</li>
+                  <li>• Smart calendar & event management</li>
+                  <li>• Natural language processing capabilities</li>
+                  <li>• Third-party API integrations</li>
+                  <li>• Machine learning model optimization</li>
                 </ul>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                  asChild
-                >
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent" asChild>
                   <a href="https://github.com/AntonioPMartinho/brianai" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     View Code
@@ -347,7 +409,7 @@ export default function Portfolio() {
         <section>
           <h2 className="text-2xl font-bold mb-6 flex items-center">
             <Server className="w-6 h-6 mr-2 text-primary" />
-            Experience
+            Professional Experience
           </h2>
           <div className="space-y-6">
             {/* Software Developer (International Internship) */}
@@ -365,10 +427,11 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sole developer managing the end-to-end software lifecycle. Developed with Java (Spring Boot), MERN
-                  stack, and WordPress. Built REST APIs and services applying microservices principles. Configured and
-                  maintained self-hosted servers and production environments. Implemented CI/CD practices and database
-                  management. Delivered scalable solutions in direct collaboration with business stakeholders.
+                  Sole developer managing the complete software development lifecycle across multiple technologies. 
+                  Developed robust REST APIs with Java Spring Boot, built responsive user interfaces with MERN stack, 
+                  and maintained WordPress-based solutions. Configured production servers, implemented CI/CD pipelines, 
+                  and managed database optimization. Collaborated directly with stakeholders to deliver scalable, 
+                  business-focused solutions on tight deadlines.
                 </p>
               </CardContent>
             </Card>
@@ -422,7 +485,7 @@ export default function Portfolio() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center">
             <Database className="w-6 h-6 mr-2 text-primary" />
-            Education
+            Education & Certifications
           </h2>
           <div className="space-y-6">
             {/* 42 Porto – Software Engineering Program */}
